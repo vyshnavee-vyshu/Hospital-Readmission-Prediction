@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Readmission Prediction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">HR</div>
+        <div>
+          <div class="brand-name">Readmission Lab</div>
+          <div class="brand-sub">Healthcare analytics</div>
+        </div>
+      </div>
+      <nav class="nav" id="sidebar-nav">
+        <button class="nav-item active" data-view="overview">Overview</button>
+        <button class="nav-item" data-view="dataset">Dataset</button>
+        <button class="nav-item" data-view="analysis">Data Analysis</button>
+        <button class="nav-item" data-view="features">Feature Insights</button>
+        <button class="nav-item" data-view="models">Model Lab</button>
+        <button class="nav-item" data-view="predict">Prediction</button>
+        <button class="nav-item" data-view="history">History</button>
+        <button class="nav-item" data-view="about">About</button>
+      </nav>
+      <p class="sidebar-note">Local analytic workspace. Not a clinical system.</p>
+    </aside>
+
+    <div class="main">
+      <header class="header">
+        <div>
+          <h1>Hospital Readmission Prediction</h1>
+          <p>Machine Learning Healthcare Analytics</p>
+        </div>
+        <div class="status-cluster">
+          <div class="status-item">
+            <span class="status-label">Dataset</span>
+            <span class="status-value" id="dataset-status"><span class="dot idle"></span> Not loaded</span>
+          </div>
+          <div class="status-item">
+            <span class="status-label">Model</span>
+            <span class="status-value" id="model-status"><span class="dot idle"></span> Not trained</span>
+          </div>
+        </div>
+      </header>
+
+      <div id="alert-region" class="alert-region" hidden></div>
+
+      <main class="content">
+        <section class="view active" id="view-overview">
+          <div class="hero">
+            <h2>Hospital Readmission Prediction</h2>
+            <p>Analyze hospital records, evaluate machine learning models, and generate estimated readmission predictions.</p>
+          </div>
+          <div class="stat-grid" id="overview-stats"></div>
+          <div class="panel-grid">
+            <article class="panel">
+              <h3>Readmission Distribution</h3>
+              <div class="chart-wrap"><canvas id="chart-overview-dist"></canvas></div>
+              <p class="empty-inline" id="overview-dist-empty">Upload a dataset to populate this chart.</p>
+            </article>
+            <article class="panel">
+              <h3>Model Performance</h3>
+              <div class="chart-wrap"><canvas id="chart-overview-models"></canvas></div>
+              <p class="empty-inline" id="overview-models-empty">Train models to compare F1 scores.</p>
+            </article>
+            <article class="panel">
+              <h3>Top Predictive Features</h3>
+              <div class="chart-wrap"><canvas id="chart-overview-features"></canvas></div>
+              <p class="empty-inline" id="overview-features-empty">Feature importance appears after training.</p>
+            </article>
+            <article class="panel">
+              <h3>Recent Predictions</h3>
+              <div id="overview-recent" class="table-wrap"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-dataset">
+          <div class="page-intro">
+            <h2>Dataset</h2>
+            <p>Upload a hospital encounter CSV, review quality metrics, then process the file for modeling.</p>
+          </div>
+          <article class="panel">
+            <h3>Upload Hospital Dataset</h3>
+            <div id="drop-zone" class="drop-zone">
+              <p>Drag and drop a CSV file here</p>
+              <label class="btn btn-secondary">Browse CSV<input id="file-input" type="file" accept=".csv" hidden></label>
+            </div>
+            <div id="dataset-summary" class="meta-grid" hidden></div>
+            <div class="toolbar">
+              <button id="process-btn" class="btn btn-primary" disabled>Process Dataset</button>
+              <span id="process-note" class="muted"></span>
+            </div>
+          </article>
+          <article class="panel">
+            <h3>Data Preview</h3>
+            <div id="preview-table" class="table-wrap"><p class="empty-inline">No file loaded.</p></div>
+          </article>
+        </section>
+
+        <section class="view" id="view-analysis">
+          <div class="page-intro">
+            <h2>Data Analysis</h2>
+            <p>Exploratory views are computed from the currently uploaded dataset.</p>
+          </div>
+          <div class="panel-grid" id="eda-panels"></div>
+        </section>
+
+        <section class="view" id="view-features">
+          <div class="page-intro">
+            <h2>Feature Insights</h2>
+            <p>Relative contribution of encoded features from the active model.</p>
+          </div>
+          <article class="panel">
+            <h3>Top Predictive Features</h3>
+            <p class="muted" id="feature-model-label"></p>
+            <div class="chart-wrap tall"><canvas id="chart-features"></canvas></div>
+            <div id="feature-table" class="table-wrap"></div>
+          </article>
+        </section>
+
+        <section class="view" id="view-models">
+          <div class="page-intro">
+            <h2>Model Lab</h2>
+            <p>Train classifiers on the processed training split and compare hold-out metrics.</p>
+          </div>
+          <div class="model-grid" id="model-cards"></div>
+          <div class="toolbar">
+            <button id="train-btn" class="btn btn-primary">Train Selected Models</button>
+            <span class="muted">Evaluation uses a stratified 80/20 hold-out split fitted only on training data.</span>
+          </div>
+          <article class="panel">
+            <h3>Comparison</h3>
+            <p class="muted" id="selection-note"></p>
+            <div id="results-table" class="table-wrap"></div>
+          </article>
+          <div class="panel-grid">
+            <article class="panel">
+              <h3>Confusion Matrix</h3>
+              <div id="confusion-view"></div>
+            </article>
+            <article class="panel">
+              <h3>ROC Curve</h3>
+              <div class="chart-wrap"><canvas id="chart-roc"></canvas></div>
+            </article>
+            <article class="panel wide">
+              <h3>Performance Comparison</h3>
+              <div class="chart-wrap"><canvas id="chart-compare"></canvas></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-predict">
+          <div class="page-intro">
+            <h2>Prediction</h2>
+            <p>Estimate Readmission Probability from the currently trained model.</p>
+          </div>
+          <form id="predict-form" class="predict-layout">
+            <div id="predict-fields"></div>
+            <aside class="result-column">
+              <article class="panel result-panel" id="predict-result">
+                <h3>Estimated readmission status</h3>
+                <p class="muted">Submit the form to score one encounter against the active model.</p>
+              </article>
+            </aside>
+          </form>
+        </section>
+
+        <section class="view" id="view-history">
+          <div class="page-intro">
+            <h2>History</h2>
+            <p>Stored model outputs only. Encounter details are not retained as identifiable records.</p>
+          </div>
+          <article class="panel">
+            <div id="history-table" class="table-wrap"></div>
+          </article>
+        </section>
+
+        <section class="view" id="view-about">
+          <div class="page-intro">
+            <h2>About</h2>
+            <p>Academic machine-learning workspace for hospital readmission modeling.</p>
+          </div>
+          <div class="about-grid">
+            <article class="panel">
+              <h3>Project Overview</h3>
+              <p>This web application supports dataset inspection, preprocessing, model comparison, and estimated binary readmission scoring on a local machine.</p>
+            </article>
+            <article class="panel">
+              <h3>Objective</h3>
+              <p>Provide a transparent workflow from tabular hospital records to evaluated classifiers, without presenting outputs as clinical advice.</p>
+            </article>
+            <article class="panel">
+              <h3>Methodology</h3>
+              <ol class="flow">
+                <li>Dataset</li>
+                <li>Preprocessing</li>
+                <li>EDA</li>
+                <li>Feature Engineering</li>
+                <li>Model Training</li>
+                <li>Evaluation</li>
+                <li>Prediction</li>
+              </ol>
+            </article>
+            <article class="panel">
+              <h3>Dataset</h3>
+              <p>Upload any CSV with a binary or diabetes-style readmission target. Common column names include <code>readmitted</code>, <code>readmission</code>, or <code>target</code>.</p>
+              <p>Supported target values: <code>0/1</code>, <code>Yes/No</code>, <code>True/False</code>, and <code>NO / &gt;30 / &lt;30</code> (NO maps to 0; both 30-day groups map to 1).</p>
+            </article>
+            <article class="panel">
+              <h3>Machine Learning Models</h3>
+              <p>Logistic Regression, Decision Tree, Random Forest, XGBoost, and a calibrated linear Support Vector Machine. Metrics are computed on a held-out test split.</p>
+            </article>
+            <article class="panel">
+              <h3>Technology Stack</h3>
+              <p>FastAPI, Uvicorn, Pandas, NumPy, Scikit-learn, XGBoost, Joblib, SQLite, HTML, CSS, JavaScript, Chart.js.</p>
+            </article>
+            <article class="panel">
+              <h3>System Architecture</h3>
+              <p>A single local web server serves the interface and JSON APIs. Models and the preprocessor are stored as Joblib files. Prediction history is stored in SQLite.</p>
+            </article>
+            <article class="panel">
+              <h3>Limitations</h3>
+              <p>Results depend on the uploaded sample, missingness, class balance, and default hyperparameters. High-cardinality diagnoses are frequency-encoded. This is not an external clinical validation study.</p>
+            </article>
+            <article class="panel">
+              <h3>Healthcare Disclaimer</h3>
+              <p>This software is for academic demonstration only. It is not a medical device and must not be used for diagnosis, triage, discharge planning, or patient-level care decisions.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
