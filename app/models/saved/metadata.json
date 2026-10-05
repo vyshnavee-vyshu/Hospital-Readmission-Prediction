@@ -1,0 +1,1054 @@
+{
+  "filename": "dataset.csv",
+  "original_filename": "hospital.csv",
+  "uploaded_at": "2026-10-03T13:48:19+00:00",
+  "rows": 180,
+  "columns": 19,
+  "column_names": [
+    "encounter_id",
+    "age",
+    "gender",
+    "admission_type_id",
+    "discharge_disposition_id",
+    "time_in_hospital",
+    "num_lab_procedures",
+    "num_procedures",
+    "num_medications",
+    "number_outpatient",
+    "number_emergency",
+    "number_inpatient",
+    "diag_1",
+    "number_diagnoses",
+    "A1Cresult",
+    "insulin",
+    "diabetesMed",
+    "change",
+    "readmitted"
+  ],
+  "missing_values": 38,
+  "duplicates": 0,
+  "target_column": "readmitted",
+  "target_mapping": {
+    "unique_raw": [
+      "<30",
+      ">30",
+      "NO"
+    ],
+    "mapping": [
+      {
+        "raw": "<30",
+        "encoded": 1,
+        "meaning": "Readmitted"
+      },
+      {
+        "raw": ">30",
+        "encoded": 1,
+        "meaning": "Readmitted"
+      },
+      {
+        "raw": "NO",
+        "encoded": 0,
+        "meaning": "Not Readmitted"
+      }
+    ],
+    "positive_meaning": "Readmitted",
+    "negative_meaning": "Not Readmitted"
+  },
+  "readmission_rate": 0.8888888888888888,
+  "processed": true,
+  "results": {
+    "logistic_regression": {
+      "accuracy": 0.9166666666666666,
+      "precision": 0.967741935483871,
+      "recall": 0.9375,
+      "f1": 0.9523809523809523,
+      "roc_auc": 0.9453125,
+      "trained": true,
+      "trained_at": "2026-10-03T16:08:57+00:00",
+      "display_name": "Logistic Regression",
+      "confusion": {
+        "labels": [
+          "Not Readmitted",
+          "Readmitted"
+        ],
+        "matrix": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            30
+          ]
+        ],
+        "tn": 3,
+        "fp": 1,
+        "fn": 2,
+        "tp": 30
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.03125,
+          0.8125,
+          0.8125,
+          0.96875,
+          0.96875,
+          1.0,
+          1.0
+        ],
+        "auc": 0.9453125
+      },
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.2066949454760018,
+          "type": "Numeric"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.09258267869574953,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[70-80)",
+          "importance": 0.05624919212362967,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_Home Health",
+          "importance": 0.051852241715401294,
+          "type": "Categorical"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.04990773226212412,
+          "type": "Numeric"
+        },
+        {
+          "feature": "insulin_No",
+          "importance": 0.04686513429048217,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_>7",
+          "importance": 0.040526306972160885,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_>8",
+          "importance": 0.03789975437963345,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_SNF",
+          "importance": 0.03757013405846085,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[60-70)",
+          "importance": 0.03521920217703479,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Elective",
+          "importance": 0.030828409301844457,
+          "type": "Categorical"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.030259176629433802,
+          "type": "Numeric"
+        },
+        {
+          "feature": "gender_Female",
+          "importance": 0.02743760969968565,
+          "type": "Categorical"
+        },
+        {
+          "feature": "gender_Male",
+          "importance": 0.027417618701821567,
+          "type": "Categorical"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.02640216557720903,
+          "type": "Numeric"
+        },
+        {
+          "feature": "insulin_Steady",
+          "importance": 0.023972988839008023,
+          "type": "Categorical"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.02262185838649736,
+          "type": "Numeric"
+        },
+        {
+          "feature": "admission_type_id_Urgent",
+          "importance": 0.021790377487316465,
+          "type": "Categorical"
+        },
+        {
+          "feature": "insulin_Down",
+          "importance": 0.01838361163429229,
+          "type": "Categorical"
+        },
+        {
+          "feature": "change_Ch",
+          "importance": 0.017541260191924653,
+          "type": "Categorical"
+        }
+      ]
+    },
+    "decision_tree": {
+      "accuracy": 0.9166666666666666,
+      "precision": 1.0,
+      "recall": 0.90625,
+      "f1": 0.9508196721311475,
+      "roc_auc": 0.94140625,
+      "trained": true,
+      "trained_at": "2026-10-03T13:48:20+00:00",
+      "display_name": "Decision Tree",
+      "confusion": {
+        "labels": [
+          "Not Readmitted",
+          "Readmitted"
+        ],
+        "matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            3,
+            29
+          ]
+        ],
+        "tn": 4,
+        "fp": 0,
+        "fn": 3,
+        "tp": 29
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.25,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.90625,
+          0.90625,
+          1.0
+        ],
+        "auc": 0.94140625
+      },
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.7929878036520683,
+          "type": "Numeric"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.19675100645822172,
+          "type": "Numeric"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.010261189889709916,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[50-60)",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[60-70)",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[70-80)",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[80-90)",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "gender_Female",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "gender_Male",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Elective",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Emergency",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Urgent",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_Home",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_Home Health",
+          "importance": 0.0,
+          "type": "Categorical"
+        }
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.9166666666666666,
+      "precision": 0.967741935483871,
+      "recall": 0.9375,
+      "f1": 0.9523809523809523,
+      "roc_auc": 0.96875,
+      "trained": true,
+      "trained_at": "2026-10-03T16:08:57+00:00",
+      "display_name": "Random Forest",
+      "confusion": {
+        "labels": [
+          "Not Readmitted",
+          "Readmitted"
+        ],
+        "matrix": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            30
+          ]
+        ],
+        "tn": 3,
+        "fp": 1,
+        "fn": 2,
+        "tp": 30
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          0.75,
+          0.75,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.03125,
+          0.9375,
+          0.9375,
+          0.96875,
+          0.96875,
+          1.0,
+          1.0
+        ],
+        "auc": 0.96875
+      },
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.4045536620593451,
+          "type": "Numeric"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.15023804343280878,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.058974077557371815,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.05654540687173135,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.04198283772568429,
+          "type": "Numeric"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.03710075503473835,
+          "type": "Numeric"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.030979031066572904,
+          "type": "Numeric"
+        },
+        {
+          "feature": "gender_Female",
+          "importance": 0.026666726880268783,
+          "type": "Categorical"
+        },
+        {
+          "feature": "gender_Male",
+          "importance": 0.024289420931360217,
+          "type": "Categorical"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.019779170252726606,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[70-80)",
+          "importance": 0.019040526716745814,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_>8",
+          "importance": 0.017840925478382227,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_SNF",
+          "importance": 0.012615740431636303,
+          "type": "Categorical"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.010143884096249427,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[50-60)",
+          "importance": 0.00979200481391481,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Emergency",
+          "importance": 0.0077392488740567495,
+          "type": "Categorical"
+        },
+        {
+          "feature": "diabetesMed_Yes",
+          "importance": 0.006785146906577585,
+          "type": "Categorical"
+        },
+        {
+          "feature": "insulin_No",
+          "importance": 0.00642642683223755,
+          "type": "Categorical"
+        },
+        {
+          "feature": "change_Ch",
+          "importance": 0.0063455638933479835,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_>7",
+          "importance": 0.006164149116972073,
+          "type": "Categorical"
+        }
+      ]
+    },
+    "xgboost": {
+      "accuracy": 0.9444444444444444,
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1": 0.967741935483871,
+      "roc_auc": 0.96875,
+      "trained": true,
+      "trained_at": "2026-10-03T16:08:57+00:00",
+      "display_name": "XGBoost",
+      "confusion": {
+        "labels": [
+          "Not Readmitted",
+          "Readmitted"
+        ],
+        "matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            30
+          ]
+        ],
+        "tn": 4,
+        "fp": 0,
+        "fn": 2,
+        "tp": 30
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.03125,
+          0.96875,
+          0.96875,
+          1.0
+        ],
+        "auc": 0.96875
+      },
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.36550798773900056,
+          "type": "Numeric"
+        },
+        {
+          "feature": "A1Cresult_>8",
+          "importance": 0.172498374052822,
+          "type": "Categorical"
+        },
+        {
+          "feature": "diabetesMed_No",
+          "importance": 0.08258330768152777,
+          "type": "Categorical"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.06341420817757076,
+          "type": "Numeric"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.048896547088142644,
+          "type": "Numeric"
+        },
+        {
+          "feature": "insulin_No",
+          "importance": 0.034063718990938706,
+          "type": "Categorical"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.032219595997094015,
+          "type": "Numeric"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.02628559229523023,
+          "type": "Numeric"
+        },
+        {
+          "feature": "gender_Female",
+          "importance": 0.02595317533083984,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_>7",
+          "importance": 0.025284977464941478,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Urgent",
+          "importance": 0.02415088920941928,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_Home Health",
+          "importance": 0.02402877791952207,
+          "type": "Categorical"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.022862495705450448,
+          "type": "Numeric"
+        },
+        {
+          "feature": "admission_type_id_Emergency",
+          "importance": 0.02130489596246344,
+          "type": "Categorical"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.018648898107425975,
+          "type": "Numeric"
+        },
+        {
+          "feature": "change_Ch",
+          "importance": 0.012296558277610775,
+          "type": "Categorical"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[50-60)",
+          "importance": 0.0,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[60-70)",
+          "importance": 0.0,
+          "type": "Categorical"
+        }
+      ]
+    },
+    "svm": {
+      "accuracy": 0.8888888888888888,
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "f1": 0.9411764705882353,
+      "roc_auc": 0.953125,
+      "trained": true,
+      "trained_at": "2026-10-03T16:08:57+00:00",
+      "display_name": "Support Vector Machine",
+      "confusion": {
+        "labels": [
+          "Not Readmitted",
+          "Readmitted"
+        ],
+        "matrix": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            32
+          ]
+        ],
+        "tn": 0,
+        "fp": 4,
+        "fn": 0,
+        "tp": 32
+      },
+      "roc": {
+        "fpr": [
+          0.0,
+          0.0,
+          0.0,
+          0.25,
+          0.25,
+          1.0
+        ],
+        "tpr": [
+          0.0,
+          0.03125,
+          0.8125,
+          0.8125,
+          1.0,
+          1.0
+        ],
+        "auc": 0.953125
+      },
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.12793668487479584,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[60-70)",
+          "importance": 0.05813750368114533,
+          "type": "Categorical"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.05670663026314689,
+          "type": "Numeric"
+        },
+        {
+          "feature": "gender_Male",
+          "importance": 0.05567822163521352,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_>7",
+          "importance": 0.054750680268996176,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[70-80)",
+          "importance": 0.046571641555309594,
+          "type": "Categorical"
+        },
+        {
+          "feature": "discharge_disposition_id_SNF",
+          "importance": 0.04385926226596908,
+          "type": "Categorical"
+        },
+        {
+          "feature": "change_No",
+          "importance": 0.0389568822480173,
+          "type": "Categorical"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.036635556261086694,
+          "type": "Numeric"
+        },
+        {
+          "feature": "age_[50-60)",
+          "importance": 0.0332402874532659,
+          "type": "Categorical"
+        },
+        {
+          "feature": "A1Cresult_Norm",
+          "importance": 0.032686861403973796,
+          "type": "Categorical"
+        },
+        {
+          "feature": "diabetesMed_Yes",
+          "importance": 0.032056666872090495,
+          "type": "Categorical"
+        },
+        {
+          "feature": "admission_type_id_Elective",
+          "importance": 0.0304793290538615,
+          "type": "Categorical"
+        },
+        {
+          "feature": "insulin_Steady",
+          "importance": 0.028136577252011435,
+          "type": "Categorical"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.027003778944299752,
+          "type": "Numeric"
+        },
+        {
+          "feature": "discharge_disposition_id_Home",
+          "importance": 0.026463288923947444,
+          "type": "Categorical"
+        },
+        {
+          "feature": "insulin_Up",
+          "importance": 0.025978307296207526,
+          "type": "Categorical"
+        },
+        {
+          "feature": "insulin_No",
+          "importance": 0.022983580643897873,
+          "type": "Categorical"
+        },
+        {
+          "feature": "age_[80-90)",
+          "importance": 0.022327924252080782,
+          "type": "Categorical"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.022257676646608673,
+          "type": "Numeric"
+        }
+      ]
+    }
+  },
+  "active_model": "random_forest",
+  "input_schema": [
+    {
+      "name": "time_in_hospital",
+      "label": "Time In Hospital",
+      "type": "numeric",
+      "section": "admission",
+      "min": 1.0,
+      "max": 14.0,
+      "median": 8.5
+    },
+    {
+      "name": "num_lab_procedures",
+      "label": "Num Lab Procedures",
+      "type": "numeric",
+      "section": "clinical",
+      "min": 10.0,
+      "max": 80.0,
+      "median": 47.0
+    },
+    {
+      "name": "num_procedures",
+      "label": "Num Procedures",
+      "type": "numeric",
+      "section": "treatment",
+      "min": 0.0,
+      "max": 6.0,
+      "median": 3.0
+    },
+    {
+      "name": "num_medications",
+      "label": "Num Medications",
+      "type": "numeric",
+      "section": "treatment",
+      "min": 1.0,
+      "max": 25.0,
+      "median": 12.0
+    },
+    {
+      "name": "number_outpatient",
+      "label": "Number Outpatient",
+      "type": "numeric",
+      "section": "history",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0
+    },
+    {
+      "name": "number_emergency",
+      "label": "Number Emergency",
+      "type": "numeric",
+      "section": "history",
+      "min": 0.0,
+      "max": 4.0,
+      "median": 2.0
+    },
+    {
+      "name": "number_inpatient",
+      "label": "Number Inpatient",
+      "type": "numeric",
+      "section": "history",
+      "min": 0.0,
+      "max": 6.0,
+      "median": 3.0
+    },
+    {
+      "name": "diag_1",
+      "label": "Diag 1",
+      "type": "numeric",
+      "section": "clinical",
+      "min": 250.0,
+      "max": 599.0,
+      "median": 428.0
+    },
+    {
+      "name": "number_diagnoses",
+      "label": "Number Diagnoses",
+      "type": "numeric",
+      "section": "clinical",
+      "min": 1.0,
+      "max": 9.0,
+      "median": 5.0
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "type": "categorical",
+      "section": "patient",
+      "options": [
+        "[70-80)",
+        "[80-90)",
+        "[50-60)",
+        "[60-70)"
+      ],
+      "default": "[70-80)"
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "categorical",
+      "section": "patient",
+      "options": [
+        "Male",
+        "Female"
+      ],
+      "default": "Male"
+    },
+    {
+      "name": "admission_type_id",
+      "label": "Admission Type Id",
+      "type": "categorical",
+      "section": "admission",
+      "options": [
+        "Emergency",
+        "Urgent",
+        "Elective"
+      ],
+      "default": "Emergency"
+    },
+    {
+      "name": "discharge_disposition_id",
+      "label": "Discharge Disposition Id",
+      "type": "categorical",
+      "section": "admission",
+      "options": [
+        "Home",
+        "Home Health",
+        "SNF"
+      ],
+      "default": "Home"
+    },
+    {
+      "name": "A1Cresult",
+      "label": "A1Cresult",
+      "type": "categorical",
+      "section": "clinical",
+      "options": [
+        ">7",
+        ">8",
+        "Norm"
+      ],
+      "default": ">7"
+    },
+    {
+      "name": "insulin",
+      "label": "Insulin",
+      "type": "categorical",
+      "section": "treatment",
+      "options": [
+        "No",
+        "Steady",
+        "Up",
+        "Down"
+      ],
+      "default": "No"
+    },
+    {
+      "name": "diabetesMed",
+      "label": "Diabetesmed",
+      "type": "categorical",
+      "section": "treatment",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "default": "No"
+    },
+    {
+      "name": "change",
+      "label": "Change",
+      "type": "categorical",
+      "section": "treatment",
+      "options": [
+        "No",
+        "Ch"
+      ],
+      "default": "No"
+    }
+  ],
+  "feature_count": 17,
+  "processed_at": "2026-10-03T13:48:19+00:00",
+  "rows_after_process": 180,
+  "duplicates_removed": 0,
+  "dropped_columns": [
+    "encounter_id"
+  ],
+  "numeric_features": [
+    "time_in_hospital",
+    "num_lab_procedures",
+    "num_procedures",
+    "num_medications",
+    "number_outpatient",
+    "number_emergency",
+    "number_inpatient",
+    "diag_1",
+    "number_diagnoses"
+  ],
+  "categorical_features": [
+    "age",
+    "gender",
+    "admission_type_id",
+    "discharge_disposition_id",
+    "A1Cresult",
+    "insulin",
+    "diabetesMed",
+    "change"
+  ],
+  "high_cardinality_features": [],
+  "encoded_feature_count": 32,
+  "train_rows": 144,
+  "test_rows": 36,
+  "column_groups": {
+    "numeric": [
+      "time_in_hospital",
+      "num_lab_procedures",
+      "num_procedures",
+      "num_medications",
+      "number_outpatient",
+      "number_emergency",
+      "number_inpatient",
+      "diag_1",
+      "number_diagnoses"
+    ],
+    "categorical": [
+      "age",
+      "gender",
+      "admission_type_id",
+      "discharge_disposition_id",
+      "A1Cresult",
+      "insulin",
+      "diabetesMed",
+      "change"
+    ],
+    "high_cardinality": []
+  },
+  "trained_at": "2026-10-03T16:08:57+00:00"
+}

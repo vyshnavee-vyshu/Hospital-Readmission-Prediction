@@ -1,0 +1,181 @@
+encounter_id,age,gender,admission_type_id,discharge_disposition_id,time_in_hospital,num_lab_procedures,num_procedures,num_medications,number_outpatient,number_emergency,number_inpatient,diag_1,number_diagnoses,A1Cresult,insulin,diabetesMed,change,readmitted
+1000,[50-60),Male,Emergency,Home,2,27,5,4,5,4,5,250.00,7,None,No,Yes,Ch,>30
+1001,[60-70),Male,Emergency,SNF,1,45,6,1,1,3,4,428.0,5,Norm,Steady,No,Ch,>30
+1002,[70-80),Male,Emergency,Home Health,6,68,4,4,3,0,0,599.0,5,>7,Steady,Yes,Ch,NO
+1003,[60-70),Female,Urgent,SNF,14,68,5,12,1,2,0,428.0,4,>7,No,Yes,Ch,>30
+1004,[60-70),Male,Emergency,Home,5,14,6,11,3,2,3,250.00,4,>7,Steady,No,No,>30
+1005,[60-70),Male,Emergency,Home,8,78,2,24,4,3,5,599.0,7,>7,Steady,Yes,No,>30
+1006,[50-60),Female,Elective,Home,14,64,4,3,3,3,0,599.0,8,>7,No,Yes,No,>30
+1007,[70-80),Male,Emergency,SNF,2,10,5,24,2,4,2,414.01,9,None,Up,Yes,Ch,>30
+1008,[50-60),Male,Urgent,Home,9,24,2,10,1,0,1,414.01,2,None,Down,Yes,Ch,>30
+1009,[70-80),Male,Emergency,Home Health,3,35,5,10,3,2,4,486,9,>8,No,Yes,Ch,<30
+1010,[60-70),Female,Emergency,Home,10,17,1,3,0,2,0,250.00,9,Norm,Up,No,Ch,>30
+1011,[80-90),Female,Urgent,SNF,10,34,0,4,5,3,5,428.0,7,>8,Down,Yes,Ch,<30
+1012,[50-60),Female,Emergency,Home,6,78,3,5,3,1,5,428.0,8,Norm,No,No,Ch,<30
+1013,[50-60),Female,Emergency,Home,14,62,3,16,1,3,4,250.00,3,>8,No,No,No,>30
+1014,[70-80),Male,Elective,Home Health,8,72,1,7,2,1,6,250.00,9,None,Up,Yes,Ch,>30
+1015,[60-70),Female,Elective,Home,14,33,0,20,0,1,4,486,2,Norm,No,Yes,No,>30
+1016,[70-80),Male,Emergency,Home Health,9,50,1,9,3,1,4,428.0,8,>7,No,Yes,No,>30
+1017,[50-60),Female,Elective,SNF,2,26,2,3,1,2,4,428.0,3,>8,Up,Yes,No,>30
+1018,[70-80),Female,Emergency,Home Health,3,80,1,9,2,4,0,414.01,6,Norm,Up,No,No,NO
+1019,[80-90),Male,Emergency,Home,11,52,6,5,5,2,0,414.01,8,>8,No,Yes,Ch,>30
+1020,[50-60),Male,Elective,Home Health,3,28,3,5,0,2,5,428.0,1,>7,Steady,Yes,Ch,>30
+1021,[80-90),Female,Emergency,Home,14,32,3,1,1,2,4,486,4,>7,Steady,Yes,No,>30
+1022,[60-70),Female,Urgent,SNF,8,49,6,8,1,0,6,414.01,7,>7,Up,Yes,No,>30
+1023,[70-80),Female,Emergency,SNF,7,32,4,9,0,0,4,599.0,7,>7,Up,No,Ch,>30
+1024,[70-80),Female,Elective,SNF,4,10,4,18,5,1,4,428.0,7,None,Up,No,Ch,>30
+1025,[70-80),Male,Urgent,SNF,9,47,4,5,1,3,2,486,3,>7,Down,Yes,No,>30
+1026,[70-80),Male,Urgent,SNF,13,37,4,16,5,1,3,250.00,5,>7,No,Yes,No,>30
+1027,[50-60),Female,Emergency,SNF,3,19,3,14,5,4,1,414.01,7,>8,Down,Yes,Ch,<30
+1028,[50-60),Male,Emergency,Home,14,76,3,2,4,1,6,250.00,8,Norm,Down,No,No,>30
+1029,[80-90),Male,Emergency,Home Health,9,70,3,9,1,2,5,599.0,8,Norm,Up,No,Ch,>30
+1030,[70-80),Male,Elective,Home,5,27,1,8,3,1,1,414.01,2,>8,Down,No,No,NO
+1031,[50-60),Male,Urgent,Home,7,55,2,25,3,3,3,599.0,9,Norm,Down,Yes,No,>30
+1032,[70-80),Male,Elective,Home,7,69,1,20,4,0,0,486,1,None,Down,Yes,No,>30
+1033,[80-90),Male,Urgent,SNF,4,45,6,14,2,0,2,486,1,None,Up,Yes,Ch,>30
+1034,[50-60),Female,Emergency,Home,1,29,1,5,3,0,5,599.0,4,>8,Up,No,Ch,>30
+1035,[50-60),Female,Urgent,Home,12,13,2,19,5,3,5,486,4,None,Steady,Yes,No,>30
+1036,[50-60),Female,Urgent,Home Health,13,64,5,12,0,4,4,428.0,1,>8,Down,Yes,No,>30
+1037,[80-90),Female,Urgent,Home,14,76,5,9,4,4,5,486,8,>8,Up,No,Ch,>30
+1038,[80-90),Female,Urgent,Home Health,5,58,2,1,3,2,0,414.01,8,Norm,Up,No,No,NO
+1039,[50-60),Female,Emergency,Home,9,62,3,18,1,3,2,486,8,None,No,No,Ch,>30
+1040,[70-80),Male,Elective,Home Health,5,54,3,24,4,2,1,428.0,8,>7,Up,No,Ch,>30
+1041,[60-70),Female,Emergency,Home Health,12,71,2,24,4,4,0,599.0,5,None,Steady,No,Ch,>30
+1042,[60-70),Male,Emergency,Home,1,80,2,23,1,3,2,250.00,1,>7,Down,No,No,>30
+1043,[80-90),Female,Emergency,SNF,5,72,0,19,5,0,0,414.01,3,>7,No,Yes,Ch,NO
+1044,[60-70),Male,Urgent,SNF,13,48,6,19,3,2,4,599.0,1,None,Steady,Yes,No,>30
+1045,[60-70),Female,Emergency,Home,4,62,3,23,4,3,1,428.0,1,Norm,Up,No,No,>30
+1046,[60-70),Male,Emergency,Home Health,13,38,5,5,2,1,2,250.00,1,Norm,Up,No,No,>30
+1047,[80-90),Male,Elective,Home Health,5,73,3,3,4,0,5,486,6,>7,No,Yes,Ch,>30
+1048,[50-60),Male,Elective,Home,14,32,3,17,5,3,6,428.0,3,>8,Down,Yes,No,>30
+1049,[50-60),Female,Urgent,SNF,6,73,2,22,3,4,2,250.00,8,None,Up,No,No,>30
+1050,[50-60),Male,Urgent,Home,7,34,4,12,4,3,6,486,1,Norm,Up,Yes,No,>30
+1051,[50-60),Female,Elective,Home Health,8,40,5,6,2,4,5,250.00,9,>8,No,Yes,Ch,>30
+1052,[60-70),Male,Elective,SNF,11,75,5,9,3,3,0,486,4,>8,Steady,No,Ch,>30
+1053,[60-70),Female,Urgent,SNF,12,53,6,17,2,0,4,428.0,5,>8,Steady,No,No,>30
+1054,[80-90),Male,Urgent,Home,13,40,4,13,1,3,4,250.00,6,>8,Down,No,Ch,>30
+1055,[70-80),Female,Urgent,Home,3,77,3,1,5,1,0,486,3,None,Down,No,No,NO
+1056,[70-80),Male,Urgent,Home Health,14,72,6,18,0,4,0,250.00,4,>7,Steady,Yes,No,>30
+1057,[50-60),Male,Emergency,Home Health,11,48,0,2,2,0,6,428.0,6,>7,Down,Yes,Ch,>30
+1058,[60-70),Female,Emergency,Home,11,58,4,22,1,3,4,599.0,3,Norm,Down,No,No,>30
+1059,[80-90),Male,Elective,Home Health,13,30,0,15,2,4,0,428.0,7,>7,Down,No,Ch,>30
+1060,[50-60),Female,Urgent,Home Health,8,55,4,10,5,2,6,250.00,7,>7,No,Yes,No,>30
+1061,[60-70),Male,Emergency,Home Health,13,34,4,9,5,1,2,250.00,1,>7,Down,Yes,No,>30
+1062,[70-80),Male,Emergency,Home,5,26,6,18,2,4,0,599.0,5,Norm,Up,No,No,NO
+1063,[50-60),Female,Emergency,Home Health,8,60,6,18,2,0,0,486,1,>7,No,No,No,NO
+1064,[70-80),Female,Elective,Home,7,70,0,20,4,2,4,599.0,4,None,Down,No,No,>30
+1065,[70-80),Male,Emergency,Home,1,40,4,5,3,3,0,428.0,9,>8,Steady,No,Ch,NO
+1066,[70-80),Female,Urgent,SNF,1,40,6,12,0,2,2,599.0,6,None,Down,No,Ch,>30
+1067,[80-90),Female,Elective,Home,14,12,0,11,1,1,6,599.0,4,None,Steady,Yes,Ch,>30
+1068,[50-60),Male,Emergency,Home,13,79,2,6,0,0,1,414.01,1,>7,Steady,No,Ch,>30
+1069,[80-90),Female,Elective,Home,3,70,3,25,2,4,0,599.0,2,>8,Steady,Yes,No,NO
+1070,[80-90),Male,Elective,Home,8,72,5,15,0,0,0,428.0,3,None,Steady,No,No,NO
+1071,[80-90),Female,Elective,Home,8,80,5,7,3,3,2,414.01,7,>7,Down,No,No,>30
+1072,[70-80),Male,Urgent,Home,7,70,0,3,0,0,2,486,2,>7,Steady,Yes,No,>30
+1073,[80-90),Female,Urgent,Home Health,6,49,2,4,4,4,3,414.01,3,>8,Steady,Yes,No,>30
+1074,[70-80),Female,Urgent,Home Health,2,13,4,22,5,2,2,250.00,3,>7,Up,No,No,<30
+1075,[80-90),Female,Emergency,Home Health,3,13,0,24,4,1,6,486,7,>8,Up,Yes,No,>30
+1076,[50-60),Female,Emergency,Home,13,16,5,3,2,3,2,486,8,>8,Down,No,Ch,>30
+1077,[80-90),Female,Urgent,Home Health,6,72,4,22,2,0,0,414.01,7,None,No,Yes,No,NO
+1078,[70-80),Male,Emergency,Home,5,73,5,14,1,1,6,486,9,Norm,Up,Yes,No,>30
+1079,[50-60),Male,Emergency,SNF,7,64,4,13,5,3,0,428.0,2,>8,No,No,Ch,NO
+1080,[70-80),Female,Urgent,Home,12,41,3,19,3,4,6,250.00,7,>7,Up,Yes,No,>30
+1081,[50-60),Female,Urgent,SNF,9,28,1,4,1,2,0,414.01,3,Norm,No,Yes,No,NO
+1082,[70-80),Male,Emergency,SNF,8,18,3,15,5,2,4,428.0,1,>7,No,No,No,>30
+1083,[70-80),Female,Elective,Home,6,74,3,15,4,4,0,250.00,8,Norm,Up,No,Ch,NO
+1084,[70-80),Female,Elective,Home Health,14,32,0,8,5,3,6,486,9,Norm,Up,No,No,>30
+1085,[50-60),Male,Emergency,SNF,6,22,4,22,3,2,6,428.0,3,>7,No,Yes,No,>30
+1086,[80-90),Female,Elective,Home Health,12,20,2,18,3,2,5,414.01,9,None,Down,No,Ch,>30
+1087,[70-80),Male,Emergency,Home,4,27,1,3,2,0,1,599.0,9,None,Up,Yes,No,>30
+1088,[60-70),Male,Emergency,SNF,13,56,5,24,1,3,5,599.0,5,>8,Steady,Yes,No,>30
+1089,[60-70),Male,Elective,Home Health,8,66,3,25,2,3,6,599.0,9,>8,Steady,Yes,Ch,>30
+1090,[80-90),Male,Elective,Home,11,76,6,4,2,0,0,414.01,5,>8,Steady,No,Ch,>30
+1091,[80-90),Male,Emergency,SNF,14,16,3,17,2,1,1,486,2,>7,Steady,Yes,No,>30
+1092,[70-80),Female,Emergency,Home,12,46,6,16,5,1,6,486,8,None,No,Yes,No,>30
+1093,[80-90),Female,Urgent,Home,9,48,0,2,1,3,1,599.0,8,None,No,No,Ch,NO
+1094,[70-80),Male,Emergency,Home Health,3,55,1,19,3,1,5,250.00,9,>7,No,Yes,No,>30
+1095,[80-90),Male,Urgent,Home Health,11,12,2,3,2,1,0,250.00,6,Norm,No,No,No,>30
+1096,[80-90),Male,Elective,Home,14,27,0,23,3,0,1,428.0,4,None,Steady,Yes,No,>30
+1097,[80-90),Male,Emergency,Home Health,7,34,2,12,0,2,4,428.0,2,>7,Down,No,No,>30
+1098,[60-70),Male,Elective,SNF,6,57,6,17,2,0,3,486,2,>8,Steady,No,No,>30
+1099,[70-80),Male,Urgent,Home Health,11,64,1,23,3,2,2,486,1,>7,Down,No,Ch,<30
+1100,[70-80),Female,Emergency,Home,7,66,0,5,0,1,5,428.0,6,>8,No,Yes,No,>30
+1101,[50-60),Female,Elective,SNF,8,60,2,21,2,1,2,250.00,1,Norm,Down,No,Ch,>30
+1102,[80-90),Female,Elective,SNF,12,72,1,4,1,0,2,486,3,>8,No,No,No,>30
+1103,[70-80),Male,Emergency,Home Health,9,32,6,12,4,1,4,250.00,4,Norm,Steady,No,Ch,>30
+1104,[80-90),Female,Elective,Home,6,18,2,13,5,3,4,599.0,7,>8,No,Yes,No,>30
+1105,[70-80),Female,Elective,Home Health,8,33,6,5,3,4,3,250.00,2,Norm,Up,Yes,Ch,>30
+1106,[70-80),Male,Emergency,SNF,4,35,5,18,2,1,5,428.0,9,None,Steady,Yes,Ch,>30
+1107,[70-80),Female,Emergency,Home,10,15,5,25,4,2,5,414.01,7,None,Down,No,No,>30
+1108,[80-90),Male,Urgent,Home,13,17,1,15,3,3,6,486,4,>7,Steady,No,No,>30
+1109,[80-90),Female,Urgent,Home Health,6,23,2,8,3,0,6,428.0,8,Norm,Steady,Yes,Ch,>30
+1110,[80-90),Female,Emergency,SNF,14,50,1,25,1,3,3,599.0,8,>8,Up,No,Ch,>30
+1111,[80-90),Female,Emergency,Home Health,9,55,0,2,2,3,3,599.0,8,>7,No,Yes,No,>30
+1112,[70-80),Male,Urgent,Home,12,61,0,19,4,1,2,428.0,9,>7,No,No,No,>30
+1113,[50-60),Female,Emergency,SNF,14,57,6,11,4,2,2,414.01,4,>8,No,Yes,Ch,>30
+1114,[80-90),Male,Emergency,Home Health,13,75,1,11,4,2,2,414.01,7,>7,Up,No,No,>30
+1115,[70-80),Female,Urgent,Home Health,6,49,6,24,5,0,0,599.0,8,>7,Steady,Yes,No,>30
+1116,[80-90),Female,Elective,Home,13,14,4,23,0,1,4,250.00,8,>7,Down,Yes,No,>30
+1117,[80-90),Female,Elective,Home,9,76,1,18,2,3,3,599.0,7,>7,Steady,No,No,>30
+1118,[70-80),Male,Emergency,Home,13,45,4,10,1,2,5,428.0,4,>8,Up,No,No,>30
+1119,[70-80),Male,Emergency,Home Health,12,79,3,13,2,1,6,428.0,1,>7,No,No,No,>30
+1120,[60-70),Female,Elective,SNF,8,44,1,4,4,4,5,414.01,4,None,Steady,Yes,Ch,>30
+1121,[80-90),Female,Elective,Home,12,10,4,6,3,3,2,486,4,>7,Up,No,Ch,>30
+1122,[60-70),Female,Emergency,SNF,11,32,0,13,3,1,0,428.0,1,None,Up,Yes,No,>30
+1123,[80-90),Female,Elective,SNF,9,44,1,4,2,1,5,486,5,Norm,No,No,No,>30
+1124,[60-70),Male,Urgent,Home Health,4,51,0,13,5,0,6,414.01,3,>8,Up,Yes,Ch,>30
+1125,[70-80),Male,Urgent,Home Health,8,11,2,21,2,1,1,250.00,2,>8,Up,Yes,No,NO
+1126,[70-80),Female,Elective,SNF,13,57,4,8,1,1,5,486,3,>8,Up,No,No,>30
+1127,[60-70),Female,Elective,Home Health,11,20,4,15,4,2,6,250.00,2,None,Steady,Yes,Ch,>30
+1128,[50-60),Female,Elective,Home Health,8,72,0,17,3,0,4,486,3,>8,Down,Yes,No,>30
+1129,[50-60),Male,Urgent,Home,12,37,4,3,0,3,2,428.0,2,None,No,No,Ch,>30
+1130,[60-70),Male,Urgent,SNF,13,67,6,13,3,0,1,599.0,3,>7,No,Yes,No,>30
+1131,[50-60),Female,Urgent,SNF,4,79,3,18,3,1,5,414.01,8,>7,Steady,No,Ch,>30
+1132,[50-60),Female,Elective,SNF,13,12,1,7,0,0,5,599.0,1,>8,No,Yes,Ch,>30
+1133,[60-70),Female,Emergency,Home Health,9,47,1,24,4,2,1,599.0,6,Norm,Up,Yes,Ch,NO
+1134,[60-70),Male,Elective,SNF,10,16,2,21,5,3,4,599.0,6,>8,Down,Yes,No,>30
+1135,[80-90),Female,Emergency,SNF,9,28,6,15,0,4,6,486,7,Norm,Down,Yes,No,>30
+1136,[80-90),Male,Emergency,Home Health,2,34,0,9,3,4,5,599.0,1,None,Steady,Yes,No,>30
+1137,[50-60),Female,Emergency,Home Health,5,25,5,25,3,1,2,599.0,4,>8,Steady,No,No,>30
+1138,[70-80),Male,Urgent,SNF,11,75,3,15,0,3,4,428.0,4,>7,Up,No,Ch,>30
+1139,[60-70),Female,Urgent,Home Health,12,63,2,5,1,2,1,414.01,7,Norm,Down,No,No,>30
+1140,[80-90),Male,Emergency,Home Health,12,55,1,5,5,4,3,486,3,None,No,Yes,Ch,>30
+1141,[60-70),Female,Elective,Home,3,11,1,17,3,2,3,250.00,8,>8,No,Yes,No,<30
+1142,[70-80),Male,Emergency,Home Health,12,65,6,6,0,0,4,599.0,3,Norm,Steady,No,No,>30
+1143,[70-80),Male,Urgent,Home Health,2,41,5,8,2,0,3,250.00,2,>8,Down,No,No,<30
+1144,[60-70),Female,Urgent,SNF,12,52,4,4,4,0,0,414.01,4,>8,Up,Yes,Ch,>30
+1145,[50-60),Female,Urgent,Home,9,36,4,5,5,3,2,250.00,5,Norm,Steady,No,No,>30
+1146,[50-60),Male,Emergency,Home,3,65,1,3,2,4,5,599.0,7,>7,No,No,No,>30
+1147,[80-90),Male,Emergency,Home Health,9,58,0,25,4,2,2,414.01,2,None,Up,Yes,No,>30
+1148,[80-90),Male,Urgent,Home,3,21,0,10,3,2,5,428.0,2,Norm,No,Yes,No,>30
+1149,[80-90),Female,Emergency,Home,9,55,4,3,4,4,4,428.0,7,None,Up,No,No,>30
+1150,[60-70),Female,Elective,SNF,9,31,1,9,2,2,5,486,3,None,Steady,No,No,>30
+1151,[50-60),Male,Urgent,Home,13,73,4,20,1,3,3,250.00,3,>7,No,No,No,>30
+1152,[70-80),Male,Urgent,SNF,13,27,2,11,4,1,3,486,6,Norm,Down,No,No,>30
+1153,[60-70),Male,Urgent,SNF,8,60,2,4,4,1,5,599.0,9,Norm,No,No,Ch,>30
+1154,[50-60),Male,Elective,SNF,14,27,5,10,1,2,2,414.01,7,>8,No,No,No,>30
+1155,[80-90),Female,Urgent,Home Health,9,78,4,21,0,0,4,414.01,6,Norm,No,No,No,>30
+1156,[50-60),Female,Urgent,Home,2,75,5,17,4,4,3,599.0,4,>8,Up,No,No,>30
+1157,[60-70),Male,Emergency,SNF,12,23,2,14,0,0,4,414.01,6,>7,Up,No,Ch,>30
+1158,[50-60),Male,Elective,Home Health,8,67,2,3,2,0,2,250.00,1,>7,No,Yes,Ch,>30
+1159,[70-80),Male,Urgent,Home,3,61,5,6,1,3,4,486,1,Norm,Down,No,No,<30
+1160,[70-80),Female,Elective,Home,4,78,1,12,2,1,1,486,2,>7,Down,No,No,NO
+1161,[80-90),Female,Elective,Home Health,6,48,4,19,0,1,2,428.0,2,Norm,Up,Yes,Ch,>30
+1162,[80-90),Male,Elective,Home,9,59,3,6,3,4,1,414.01,9,Norm,Down,No,Ch,>30
+1163,[70-80),Female,Urgent,Home,1,34,6,13,4,4,4,486,7,>8,Down,No,No,>30
+1164,[60-70),Male,Emergency,SNF,1,38,4,10,1,3,4,599.0,8,None,No,No,No,>30
+1165,[80-90),Female,Urgent,Home,1,41,2,2,3,2,6,428.0,2,>8,No,Yes,Ch,>30
+1166,[70-80),Male,Emergency,Home Health,12,27,6,7,1,0,4,599.0,6,>7,Steady,No,No,>30
+1167,[50-60),Female,Urgent,Home,14,45,6,21,1,1,2,414.01,3,>7,Steady,No,No,>30
+1168,[80-90),Male,Urgent,Home,5,21,3,17,5,2,5,428.0,8,>8,Up,Yes,Ch,>30
+1169,[70-80),Female,Elective,SNF,11,37,3,7,3,2,3,428.0,5,>7,Steady,No,No,>30
+1170,[50-60),Female,Elective,SNF,1,12,0,6,3,3,6,250.00,7,Norm,Steady,No,Ch,>30
+1171,[70-80),Male,Emergency,SNF,2,31,0,13,5,2,2,414.01,7,None,No,Yes,Ch,>30
+1172,[60-70),Male,Emergency,Home,10,53,6,4,3,1,1,486,2,Norm,Down,Yes,Ch,>30
+1173,[60-70),Male,Emergency,Home Health,5,28,0,17,4,0,2,599.0,3,>8,Up,Yes,Ch,>30
+1174,[80-90),Female,Emergency,Home,11,27,6,4,4,3,4,428.0,7,>7,Steady,Yes,No,>30
+1175,[70-80),Female,Elective,SNF,9,36,4,20,4,1,1,486,5,None,Steady,No,No,>30
+1176,[50-60),Male,Urgent,Home,2,59,6,19,3,2,4,599.0,3,>8,No,Yes,Ch,<30
+1177,[50-60),Male,Elective,SNF,1,74,6,14,3,3,1,250.00,9,Norm,Up,Yes,No,>30
+1178,[70-80),Male,Elective,Home Health,3,18,2,23,3,1,6,250.00,4,None,Down,Yes,No,>30
+1179,[60-70),Female,Emergency,Home Health,5,27,5,1,1,3,0,428.0,9,>7,Steady,No,Ch,NO
